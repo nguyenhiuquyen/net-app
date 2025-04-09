@@ -63,7 +63,7 @@ A **high-fidelity, production-grade mobile UI clone** of Netflix built using [Re
 
 ## 🗂️ Project Structure
 
-\`\`\`
+```
 project-root/
 ├── app/
 │   ├── (tabs)/
@@ -90,7 +90,7 @@ project-root/
 │   ├── new.json
 │   └── users.json
 └── contexts/                   # Global state contexts
-\`\`\`
+```
 
 ---
 
