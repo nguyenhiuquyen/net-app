@@ -1,118 +1,126 @@
-# Netflix UI Clone with Expo
+# 🎬 Netflix UI Clone (Expo + React Native)
 
-A high-fidelity Netflix mobile UI clone built with React Native and Expo, featuring advanced animations and gesture interactions.
+A **high-fidelity, production-grade mobile UI clone** of Netflix built using [React Native](https://reactnative.dev/) and [Expo](https://expo.dev). This project showcases advanced animation techniques, gesture interactions, and smooth transitions — delivering a near-native, immersive experience inspired by the official Netflix app.
 
-![Demo](assets/gifs/demo.gif)
+<p align="center">
+  <img src="assets/gifs/demo.gif" alt="Demo" width="300" />
+</p>
 
-## Key Features
+---
 
-### Profile Management
+## 🔥 Highlights
 
-- 👥 Animated profile selection screen with staggered loading
-- 🔄 Smooth profile switching transitions
-- 🎵 Sound effects and haptic feedback
+- 🎞 **Pixel-perfect design** closely replicating Netflix UI  
+- 🌀 **Smooth animations** using Reanimated 2 and shared transitions  
+- 🤌 **Gesture-enabled navigation** and modal interactions  
+- 🎮 **Interactive profile switching**, haptics, and custom sounds  
+- 📱 Built with **Expo SDK**, optimized for cross-platform deployment
 
-### Navigation & Animations
+---
 
-- 🔄 Custom tab navigation with sliding animations
-- 💫 Gesture-based content interactions
-- 🌟 Shared element transitions between screens
-- 📱 iOS-style modal presentations
-- 🎨 Dynamic blur effects and scaling
-- 🔄 Tilt animations for featured content
+## ✨ Features
 
-### Content Screens
+### 👤 Profile Management
+- Animated profile selection with **staggered load-in**
+- Seamless profile switch with **sound effects** and **haptic feedback**
+- Modular & scalable for multiple user contexts
 
-- 🏠 Animated home screen with featured content
-- 🔥 "New & Hot" section with Netflix-style layout
-- 🎮 Mobile games showcase
-- 🔍 Dynamic search with instant results
-- ⬇️ Downloads management
-- 📺 Teaser Video player
-- 📋 Expandable categories list
-- 🔤 Custom font
+### 🧭 Navigation & UX
+- Custom bottom tabs with **sliding transitions**
+- Gesture-enabled **modals and overlays**
+- **Shared element transitions** for media previews
+- iOS-style **presentation modals**
+- Tilt effects for immersive featured content
 
-### Performance
+### 🧩 Content & Discovery
+- Home screen with **carousel & vertical sections**
+- "New & Hot" section with dynamic cards
+- Full-screen **teaser video player**
+- **Game showcase**, search, and download manager
+- Expandable **categories**, dynamic font loading
 
-- ⚡ Optimized animations using Reanimated
-- 📊 Efficient list rendering [wip]
-- 🎯 Native gesture handling
-- 🔄 Smart transition management
+### ⚙️ Performance
+- **Worklet-based** animations via Reanimated 2
+- Native gesture handling via Gesture Handler
+- Optimized list rendering (FlatList & virtualized views)
+- Low memory footprint, high frame-rate UX
 
-## Tech Stack
+---
 
-- [Expo](https://expo.dev) - React Native development platform
-- [Expo Router](https://docs.expo.dev/router/introduction) - File-based routing
-- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/) - Smooth animations
-- [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/) - Native gestures
-- [Expo Haptics](https://docs.expo.dev/versions/latest/sdk/haptics/) - Haptic feedback
-- [Expo AV](https://docs.expo.dev/versions/latest/sdk/av/) - Audio/video playback
+## 🧰 Tech Stack
 
-## Implementation Details
+| Tool/Library                 | Description                               |
+|-----------------------------|-------------------------------------------|
+| [Expo](https://expo.dev)    | Fast development & deployment environment |
+| React Native                | Core mobile UI framework                  |
+| [Expo Router](https://expo.dev/router) | File-based navigation system             |
+| [Reanimated 2](https://docs.swmansion.com/react-native-reanimated/) | Declarative, performant animations        |
+| [Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/) | Native gesture support                    |
+| [Expo AV](https://docs.expo.dev/versions/latest/sdk/av/) | Audio & video playback                   |
+| [Expo Haptics](https://docs.expo.dev/versions/latest/sdk/haptics/) | Haptic feedback                          |
 
-### Animation System
+---
 
-- Custom tab screen wrapper for consistent transitions
-- Worklet-based animations for optimal performance
-- Shared element transitions for content previews
-- Gesture-based modal interactions
+## 🗂️ Project Structure
 
-### State Management
-
-- Context-based profile management
-- Animation state coordination
-- Tab navigation state handling
-
-### UI Components
-
-- Reusable animated components
-- Custom Netflix-style icons and layouts
-
-## Project Structure
-
-```
+\`\`\`
 project-root/
 ├── app/
 │   ├── (tabs)/
-│   │   ├── (profile)/        # Profile section
-│   │   ├── index.tsx         # Home screen
-│   │   └── new.tsx          # New & Hot screen
-│   ├── movie/
-│   ├── _layout.tsx          # Root layout
-│   └── search.tsx           # Search functionality
+│   │   ├── (profile)/           # Profile selection
+│   │   ├── index.tsx            # Home screen
+│   │   └── new.tsx              # New & Hot
+│   ├── movie/                   # Movie details
+│   ├── _layout.tsx             # Global layout wrapper
+│   └── search.tsx              # Search UI
 ├── components/
-│   ├── MovieList/           # Movie listings
-│   ├── GameList/            # Games section
-│   ├── FeaturedContent/     # Featured content
-│   ├── BottomSheet/         # Bottom sheets
-│   ├── navigation/          # Navigation components
-│   └── WhoIsWatching/       # Profile selection
-├── hooks/
+│   ├── MovieList/              # Media lists
+│   ├── GameList/               # Game cards
+│   ├── FeaturedContent/        # Featured UI
+│   ├── BottomSheet/            # Sheets & modals
+│   ├── navigation/             # Tab & stack navigation
+│   └── WhoIsWatching/          # Profile entry
+├── hooks/                      # Custom hooks
 │   ├── useCachedResources.ts
 │   ├── useColorScheme.ts
 │   ├── useDeviceMotion.ts
 │   └── useOverlayView.ts
-├── data/
-│   ├── movies.json          # Movie data
-│   ├── new.json            # New content data
-│   └── users.json          # User profiles
-└── contexts/               # App-wide state management
-```
+├── data/                       # Static mock data
+│   ├── movies.json
+│   ├── new.json
+│   └── users.json
+└── contexts/                   # Global state contexts
+\`\`\`
 
-## TODO
+---
 
-- [ ] Shared transition on modal navigation
-- [ ] Bug: Disable shift animation on back (fixed on branch router-4 (React Navigation 7))
-- [ ] X-Ray style content details
-- [ ] Full screen video player
-- [ ] Color extraction from images for dynamic theming
+## 📌 Roadmap / TODOs
 
-## Contributing
+- [ ] **Shared transitions** in modal navigation  
+- [ ] Fix: Disable "shift animation" on back *(see branch \`router-4\` w/ React Navigation 7)*  
+- [ ] Add **X-Ray style content details**  
+- [ ] Implement **full-screen video player**  
+- [ ] **Dynamic theming** via color extraction from thumbnails
 
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
+---
 
-## License
+## 🤝 Contributing
 
-MIT License
+We welcome community contributions! To contribute:
+
+1. **Fork** this repository  
+2. Create a new branch: \`feature/your-feature-name\`  
+3. Submit a detailed **Pull Request**
+
+Please ensure your code follows project conventions and includes meaningful documentation when needed.
+
+---
+
+## 📄 License
+
+This project is open-sourced under the [MIT License](LICENSE).  
+You are free to use, modify, and distribute this project for personal and commercial purposes.
+
+---
+
+> Inspired by Netflix. This is a UI/UX clone and **not affiliated** with Netflix, Inc.
